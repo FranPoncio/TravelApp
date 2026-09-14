@@ -19,6 +19,17 @@ Maps?** Si la respuesta es "lo hace igual", no va. Lo que diferencia es la
 ficha —foto, reseña histórica, precio, cómo llegar—, la ruta escénica que
 pasa por otro punto de camino, y el filtro por tipo de actividad.
 
+## Estado
+
+En producción, con 413 puntos turísticos en 14 localidades de Argentina y
+Nueva Zelanda.
+
+**El roadmap no está relevado.** Nadie escribió todavía qué falta ni en qué
+orden. Si vas a planificar, preguntale a Francisco en vez de suponer — y
+dejá acá lo que te diga.
+
+**Al terminar una sesión, actualizá estas líneas.**
+
 ## Dónde está cada cosa
 
 ```
