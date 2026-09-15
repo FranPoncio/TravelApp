@@ -21,12 +21,34 @@ pasa por otro punto de camino, y el filtro por tipo de actividad.
 
 ## Estado
 
-En producción, con 413 puntos turísticos en 14 localidades de Argentina y
-Nueva Zelanda.
+En producción. **El catálogo creció mucho más que la documentación**: hoy son
+**11 países, 65 localidades y más de 1.000 puntos**, no los "413 puntos en 14
+localidades de Argentina y Nueva Zelanda" que se venían repitiendo. Los países
+son Argentina, Nueva Zelanda, Japón, Tailandia, Australia, Vietnam, Camboya,
+China, Laos, Singapur y Corea del Sur.
 
-**El roadmap no está relevado.** Nadie escribió todavía qué falta ni en qué
-orden. Si vas a planificar, preguntale a Francisco en vez de suponer — y
-dejá acá lo que te diga.
+No hardcodees esos números: recalculalos cuando los necesites.
+
+```bash
+grep -c "puntos:" assets/js/data.js          # localidades
+grep -cE "(?<![A-Za-z])PN?\(" assets/js/data.js   # puntos (P = sólo es, PN = bilingüe)
+```
+
+Lo que está flojo y conviene saber antes de planificar:
+
+- **El GTFS cubre sólo dos regiones de Argentina** (subte de Buenos Aires e
+  interurbano de Córdoba). Para los otros diez países y el resto del país, el
+  transporte que se muestra es la nota curada, no datos reales. El discurso de
+  "transporte público real" aplica a una porción chica del catálogo.
+- **Los datos de Argentina son monolingües.** Usan el helper `P()`, sin par
+  es/en; los otros diez países usan `PN()`, que sí es bilingüe. Si agregás
+  puntos, fijate cuál corresponde.
+- **Quedan cadenas sin pasar por i18n**: el `title` del botón de tema en
+  `index.html`, el crédito del pie (Mapa © OpenStreetMap · CARTO | Ruteo ©
+  Valhalla), y el `<title>` y `<meta description>` del documento.
+- **No hay tests.** Con más de mil entradas cargadas a mano, un chequeo de
+  esquema —ids únicos, lat/lng válidas, pares es/en completos donde
+  corresponde— atajaría errores que hoy no avisan.
 
 **Al terminar una sesión, actualizá estas líneas.**
 

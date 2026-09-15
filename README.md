@@ -1,12 +1,13 @@
 # 🌏 TRAVAPP
 
 Aplicación web **bilingüe (ES/EN)** para **planificar viajes a los puntos más turísticos
-de Argentina y Nueva Zelanda** (ambas islas), calculando las mejores rutas según tu
-ubicación y tu medio de transporte. Un **selector de país** cambia entre 🇦🇷 Argentina y
-🇳🇿 Nueva Zelanda, y un **toggle de idioma** alterna toda la interfaz y las fichas.
+de 11 países** —Argentina, Nueva Zelanda, Japón, Tailandia, Australia, Vietnam, Camboya,
+China, Laos, Singapur y Corea del Sur—, calculando las mejores rutas según tu ubicación y
+tu medio de transporte. Un **selector de país** cambia entre ellos y un **toggle de
+idioma** alterna toda la interfaz y las fichas.
 
-> Nota: el contenido de Nueva Zelanda está en español e inglés; el de Argentina, por ahora,
-> en español (la interfaz sí es bilingüe en ambos países).
+> Nota: el contenido de Argentina está sólo en español; el de los otros diez países, en
+> español e inglés. La interfaz sí es bilingüe en todos.
 
 ![Rutas Argentinas](https://commons.wikimedia.org/wiki/Special:FilePath/Obelisco_de_Buenos_Aires_2021.jpg?width=800)
 
@@ -23,13 +24,13 @@ ubicación y tu medio de transporte. Un **selector de país** cambia entre 🇦�
 ### Además
 
 - 🎨 **Tema claro/oscuro** con botón que respeta la preferencia de tu sistema (se recuerda tu elección).
-- 🔤 **Tipografías modernas** (Fredoka + Nunito) vendorizadas localmente.
+- 🔤 **Tipografía moderna** (Plus Jakarta Sans) vendorizada localmente.
 - 📌 **Pines coloreados por actividad**: cada pin usa el color de su sector (verde naturaleza, naranja trekking, azul museos, etc.); el destino se resalta con un aro.
 - 🎟️ **Pin de eventos** en el centro de cada localidad: foto, reseña y enlace a la **agenda oficial de eventos**.
 - 🏷️ **Filtro por 8 tipos de actividad**: naturaleza, trekking, museos, histórico, shopping, paseos, gastronomía y playas.
 - 🎫 **Precio de entrada** de cada lugar (o si es gratis) — _orientativo_.
 - 🚌 **Info de transporte público** para llegar a cada punto — _orientativa_.
-- 📚 **413 puntos turísticos** (≈30 por localidad) en 14 localidades/regiones, incluyendo los valles cordobeses de **Punilla** y **Calamuchita**.
+- 📚 **Más de 1.000 puntos turísticos** repartidos en 65 localidades/regiones de 11 países — 413 de ellos en Argentina, incluyendo los valles cordobeses de **Punilla** y **Calamuchita**.
 
 > ⚠ Los precios de entrada y la información de transporte son **orientativos**: Argentina tiene alta inflación y las líneas de colectivo cambian. Sirven como guía, no como dato oficial.
 
@@ -79,7 +80,7 @@ python3 -m http.server 8000
 │   ├── js/
 │   │   ├── data.js            # Localidades, puntos turísticos, actividades y modos
 │   │   └── app.js             # Lógica: mapa, ruteo, prioridades, filtros, GTFS, UI
-│   └── vendor/                # Leaflet y fuentes (Fredoka, Nunito) vendorizados
+│   └── vendor/                # Leaflet y la tipografía (Plus Jakarta Sans) vendorizados
 ├── data/gtfs/                 # Feeds GTFS crudos (Subte de Buenos Aires)
 ├── scripts/
 │   ├── build-gtfs.mjs         # Pipeline GTFS -> transporte-gtfs.json
